@@ -1,0 +1,185 @@
+[data-theme="light"] {
+  --title-bg: white;
+  --title-color: black;
+  --whitespace-color: white;
+  --accent-color: #f0f0f0;
+}
+
+[data-theme="dark"] {
+  --title-bg: gray;
+  --title-color: white;
+  --whitespace-color: darkgray;
+  --accent-color: #e8e8e8;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #202020;
+    padding: 0.5rem 5rem
+}
+
+header > h1 {
+    color: white;
+}
+
+#addCard {
+    gap: 0.5rem;
+}
+
+#cardTitle {
+    width: 20em;
+    background-color: var(--title-bg);
+    color: var(--title-color);
+}
+#cardTitle::placeholder {
+  color: var(--title-color);
+}
+
+#cardColor {
+    width: 8em;
+}
+
+#addButton {
+    background-color: lightgreen;
+    color: black;
+    padding: 0.25rem 1rem;
+}
+
+
+
+/* .buttons > * {
+    padding: 0 0.25rem;
+}
+
+.buttons > *:first-child {
+    padding: 0 0.25rem 0 0; 
+}
+
+.buttons > *:last-child {
+    padding: 0 0 0 0.25rem;
+} */
+
+#board {
+  margin-inline: 5rem;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.column {
+  flex: 1;
+  padding-bottom: 3rem;
+  height: 100%
+}
+
+#todo, #done {
+  background-color: var(--accent-color);
+  padding: 0 .5rem;
+}
+
+#doing {
+  background-color: var(--whitespace-color);
+  padding: 0 0.5rem;
+}
+
+.column > h2 {
+  padding:  1rem 1rem 1rem 0;
+}
+
+.moveHere {
+  width: 100%;
+}
+
+.card {
+  margin-block: 1rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  position: relative;
+}
+
+.buttons {
+  visibility: hidden;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.card:hover > .buttons {
+  visibility: visible;
+
+}
+
+.buttons > * {
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--whitespace-color);
+}
+
+#svg {
+  background-color: inherit;
+  border: none;
+}
